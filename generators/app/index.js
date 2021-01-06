@@ -17,6 +17,10 @@ module.exports = class extends (
         ...templatePackage.devDependencies,
         ...destPackage.devDependencies,
       },
+      scripts: {
+        ...templatePackage.scripts,
+        ...destPackage.scripts,
+      },
     };
     this.fs.writeJSON(this.destinationPath("package.json"), merged);
   }
